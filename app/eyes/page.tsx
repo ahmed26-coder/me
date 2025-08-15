@@ -4,7 +4,7 @@ import { useState, useEffect } from "react"
 import { Card } from "@/components/ui/card"
 import { Heart, Sparkles } from "lucide-react"
 import { RomanticVideoBackground } from "@/components/romantic-video-background"
-
+import Image from "next/image"
 
 export default function EyesPage() {
   const [showContent, setShowContent] = useState(false)
@@ -52,7 +52,10 @@ export default function EyesPage() {
             {/* Image */}
             <div className="relative">
               <Card className="overflow-hidden border-primary/20 py-0 glow-effect">
-                <img
+                <Image
+                priority
+                width={1000}
+                height={1000}
                   src="/IMG-20250607-WA0002.jpg"
                   alt="Beautiful eyes"
                   className="w-full h-auto object-cover"

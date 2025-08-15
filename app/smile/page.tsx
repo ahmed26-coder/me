@@ -1,5 +1,5 @@
 "use client"
-
+import Image from "next/image"
 import { useState, useEffect } from "react"
 import { Card } from "@/components/ui/card"
 import { Heart, Sun } from "lucide-react"
@@ -83,7 +83,10 @@ export default function SmilePage() {
             {/* Image */}
             <div className="relative">
               <Card className="overflow-hidden py-0 border-primary/20 glow-effect">
-                <img
+                                <Image
+                                priority
+                                width={1000}
+                                height={1000}
                   src="/IMG-20250308-WA0002.jpg"
                   alt="Beautiful smile"
                   className="w-full h-auto object-cover"
